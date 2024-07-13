@@ -23,13 +23,19 @@ NumPy
    
    ```cd Real-OBD```
 
-2. Create a virtual environment and activate it:
+2. Create a virtual environment :
    
    ```python -m venv venv```
-  
-   ```source venv/bin/activate  # On Windows, use `venv\Scripts\activate` ```
 
-3. Install the required dependencies:
+3. Activate environment :
+   
+   ```source venv/bin/activate```
+   
+   On Windows, use
+   
+   ``` venv\Scripts\activate ```
+
+5. Install the required dependencies:
 
    ```pip install -r requirements.txt```
 
@@ -44,12 +50,16 @@ Start the application:
 
 - More userfriendly.
 - Implementation of attractive UI.
+- And many more...
 
 ## License
 
-Free to use and modify, just follow me ⭐.
+Feel free to use and modify, just follow me ⭐.
+
+
 
 <p align="center"> 
+   <br>
  <span><b>made with ❤</b></span>      
 </p>
 
