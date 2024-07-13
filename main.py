@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Load YOLOv8 model
-model = YOLO('yolov8m.pt')  # or your custom trained model
+model = YOLO('yolov8m.pt')
 
 def calculate_pixel_mm_ratio(image_path, known_width_mm):
     # Load the image
@@ -36,7 +36,7 @@ def calculate_dimensions(bbox, pixel_mm_ratio):
 # Main process for real-time video
 def process_video_stream(pixel_mm_ratio):
     # Open webcam
-    cap = cv2.VideoCapture(0)  # Use 0 for default webcam, or change to video file path
+    cap = cv2.VideoCapture(0)  # Use 0 for default webcam
 
     while cap.isOpened():
         success, frame = cap.read()
@@ -58,7 +58,7 @@ def process_video_stream(pixel_mm_ratio):
                 class_name = model.names[cls]
                 conf = float(box.conf[0])
                 
-                # width, height = calculate_dimensions((x1, y1, bbox_width, bbox_height), pixel_mm_ratio)
+                
                 width_mm, height_mm = calculate_dimensions((x1, y1, bbox_width, bbox_height), pixel_mm_ratio)
                 
                 
