@@ -41,10 +41,14 @@ NumPy
 
 ## Usage 
 
-Start the application:
+- Start the application:
    
    ```python main.py```
 
+## Demo :
+
+
+https://github.com/user-attachments/assets/f2e31415-cabc-4313-85bf-335475823526
 
 ## Future Improvements
 
