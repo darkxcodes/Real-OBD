@@ -64,12 +64,20 @@ def process_video_stream(pixel_mm_ratio):
                 
                 # Draw bounding box and dimensions on frame
                 cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
+
+                
                 label_top = f'{class_name}'
                 label_bottom = f'{width_mm:.1f}cm x {height_mm:.1f}cm'
+                
+
                 cv2.putText(frame, label_top, (int(x1), int(y1)-10), 
                             cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,255,0), 2)
                 cv2.putText(frame, label_bottom, (int(x1), int(y2)+25), 
                             cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0,255,0), 2)
+        
+        label_head = "Place Object in Upright Position."
+        cv2.putText(frame, label_head, (10, 20), 
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0,200,200), 2)
 
         # Display the result
         cv2.imshow('Real-time Object Detection and Measurement', frame)
