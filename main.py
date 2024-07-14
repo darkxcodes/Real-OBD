@@ -93,7 +93,7 @@ def process_video_stream(pixel_mm_ratio):
 
 # Example usage
 calibration_image_path = 'calib.jpg'
-known_width_mm = 80 * 6  # The known width of the reference object in millimeters
+known_width_mm = 7 * 7  # The known width of the reference object in millimeters
 
 try:
     pixel_mm_ratio = calculate_pixel_mm_ratio(calibration_image_path, known_width_mm)
